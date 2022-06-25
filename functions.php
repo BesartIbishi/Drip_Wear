@@ -8,6 +8,9 @@
  * @package Fancy Lab
  */
 
+  add_theme_support('menus');
+
+
  function fancy_lab_scripts(){
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri(  ).'/inc/bootstrap.min.js', array('jquery'), '4.3.1', true );
@@ -20,13 +23,11 @@
  }
  add_action( 'wp_enqueue_scripts', 'fancy_lab_scripts' );
 
- function drip_wear_config(){
+ //Menus
 	register_nav_menus( 
 		array(
-		'drip_wear_main_menu' => 'Drip Wear Main Menu'
+		'drip_wear_main_menu' => 'Drip Wear Main Menu',
+		'drip_wear_footer_menu'=> 'Drip Wear Footer Menu'
 		)
 	);
- }
- add_theme_support( 'menus' );
-
- add_action('after-setup_theme', 'drip_wear_config', 0);
+ 

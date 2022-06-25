@@ -32,10 +32,10 @@
 							<div class="acount">Account</div>
 							<nav class="main-menu">
 								<?php 
-									wp_nav_menu( 
-										array(
-											'theme_location' => 'drip_wear_main_menu'
-										)
+								wp_nav_menu( 
+									array(
+									'theme_location' => 'drip_wear_main_menu'
+									)
 									);
 								?>
 							</nav>
