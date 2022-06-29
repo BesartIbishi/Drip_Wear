@@ -52,4 +52,6 @@
 
 add_action( 'after_setup_theme', 'drip_wear_config', 0 );
 
-require get_template_directory() . '/inc/wc-modifications.php';
+if( class_exists('woocommerce')){
+	require get_template_directory() . '/inc/wc-modifications.php';
+}
