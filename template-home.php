@@ -1,7 +1,10 @@
 <?php 
-/*
-Template Name: Home Page
+/**
+* Template Name: Home Page
+*
+* @package Drip Wear
 */
+
 get_header();
 ?>
 		<div class="content-area">
