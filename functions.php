@@ -7,6 +7,10 @@
  * @package Drip Wear
  */
 
+ // Register Custom Navigation Walker
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+
  function drip_wear_scripts(){
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri(  ).'/inc/bootstrap.min.js', array('jquery'), '4.3.1', true );
@@ -14,6 +18,8 @@
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri(  ).'/inc/bootstrap.min.css', array(), '4.3.1', 'all' );
 
  	wp_enqueue_style( 'drip-wear-style', get_stylesheet_uri(), array(), filemtime(get_template_directory() . '/style.css'), 'all' );
+
+	 wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700');
  }
 
  add_action( 'wp_enqueue_scripts', 'drip_wear_scripts' );

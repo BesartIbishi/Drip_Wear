@@ -7,6 +7,9 @@ Text-domain: drip-wear
 Tags: e-commerce, custom-menu, costum-logo, featured-images, footer-widgets
 */
 
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
 
 /* Header - Main Menu */
 .main-menu{
@@ -30,6 +33,14 @@ Tags: e-commerce, custom-menu, costum-logo, featured-images, footer-widgets
     margin: 0; 
 }
 
+.main-menu .dropdown:hover>.dropdown-menu, 
+.main-menu .dropup:hover>.dropdown-menu  {
+  display: block;
+}
+
+.main-menu .navbar-toggler-icon {
+    background-image: url('img/hamburger-menu.svg');
+}
 
 /* Footer - Footer Menu */
 .footer-menu ul, .footer-widgets ul{ 
