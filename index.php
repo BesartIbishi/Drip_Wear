@@ -47,7 +47,14 @@ get_header();
 									</article>
 								<?php
 							endwhile;
-						else:
+					// We're using numeric page navigation here.
+					the_posts_pagination( array(
+						'prev_text'		=> 'Previous',
+						'next_text'		=> 'Next',
+					));
+					
+				else:
+			?>
 					?>
 						<p>Nothing to display.</p>
 					<?php endif; ?>
