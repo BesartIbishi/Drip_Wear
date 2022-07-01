@@ -34,7 +34,7 @@ get_header(); ?>
 								$slider_loop->the_post();
 						?>
 						    <li>
-						      <?php the_post_thumbnail( 'fancy-lab-slider', array( 'class' => 'img-fluid' ) ); ?>
+						      <?php the_post_thumbnail( 'drip-wear-slider', array( 'class' => 'img-fluid' ) ); ?>
 						      <div class="container">
 						      	<div class="slider-details-container">
 						      		<div class="slider-title">
@@ -169,7 +169,7 @@ get_header(); ?>
 												<a href="<?php the_permalink(); ?>">
 													<?php 
 														if( has_post_thumbnail() ):
-															the_post_thumbnail( 'fancy-lab-blog', array( 'class' => 'img-fluid' ) );
+															the_post_thumbnail( 'drip-wear-blog', array( 'class' => 'img-fluid' ) );
 														endif;
 													?>
 												</a>
