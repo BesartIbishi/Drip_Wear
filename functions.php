@@ -7,10 +7,10 @@
  * @package Drip Wear
  */
 
- // Register Custom Navigation Walker
+
 require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
- // Register Custom Navigation Walker
+
  require_once get_template_directory() . '/inc/customizer.php';
  function drip_wear_scripts(){
 
@@ -20,8 +20,13 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
  	wp_enqueue_style( 'drip-wear-style', get_stylesheet_uri(), array(), filemtime(get_template_directory() . '/style.css'), 'all' );
 
-	 wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700');
+	 wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|Seaweed+Script' );
+
+	wp_enqueue_script( 'flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', array( 'jquery' ), '', true );
+	wp_enqueue_style( 'flexslider-css', get_template_directory_uri() . '/inc/flexslider/flexslider.css', array(), '', 'all' );
+	wp_enqueue_script( 'flexslider-js', get_template_directory_uri() . '/inc/flexslider/flexslider.js', array( 'jquery' ), '', true );
  }
+
 
  add_action( 'wp_enqueue_scripts', 'drip_wear_scripts' );
 
@@ -58,7 +63,9 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 		'flex-height'	=> true,
 		'flex-width'	=> true
 	) );
-
+	add_theme_support('post-thumbnails');
+	add_image_size( 'drip-wear-slider', 1920, 800, array( 'center', 'center' ) );
+	add_image_size( 'drip-wear-blog', 960, 640, array( 'center', 'center' ) );
 	if ( ! isset( $content_width ) ) {
 		$content_width = 600;
 	}				
@@ -71,11 +78,11 @@ if( class_exists('woocommerce')){
 }
 
 
-//Show cart contents / total Ajax
- 
-add_filter( 'woocommerce_add_to_cart_fragments', 'fancy_lab_woocommerce_header_add_to_cart_fragment' );
 
-function fancy_lab_woocommerce_header_add_to_cart_fragment( $fragments ) {
+ 
+add_filter( 'woocommerce_add_to_cart_fragments', 'drip_wear_woocommerce_header_add_to_cart_fragment' );
+
+function drip_wear_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
 
 	ob_start();
