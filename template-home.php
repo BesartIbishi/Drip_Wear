@@ -99,7 +99,7 @@ get_header(); ?>
 						$test = get_post_meta($deal, '_regular_price');
 						
 						if( $showdeal == 1 && ( !empty( $deal ) ) ):
-							$discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
+							//$discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
 						?>
 						<section class="deal-of-the-week">
 							<div class="container">
@@ -112,9 +112,9 @@ get_header(); ?>
 									</div>
 									<div class="deal-desc col-md-4 col-12 mr-auto text-center">
 										<?php if( !empty( $sale ) ): ?>
-											<span class="discount">
+											<!-- <span class="discount">
 												<?php echo $discount_percentage . '% OFF'; ?>
-											</span>
+											</span> -->
 										<?php endif; ?>
 										<h3>
 											<a href="<?php echo get_permalink( $deal ); ?>"><?php echo get_the_title( $deal ); ?></a>
