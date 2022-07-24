@@ -69,6 +69,7 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 	if ( ! isset( $content_width ) ) {
 		$content_width = 600;
 	}				
+	add_theme_support ( 'title-tag' );
 }
 
 add_action( 'after_setup_theme', 'drip_wear_config', 0 );
@@ -92,4 +93,17 @@ function drip_wear_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	<?php
 	$fragments['span.items'] = ob_get_clean();
 	return $fragments;
+}
+
+add_action( 'widgets_init', 'drip_wear_sidebars' );
+function drip_wear_sidebars(){
+	register_sidebar( array(
+		'name'			=> 'Drip Wear Main Sidebar',
+		'id'			=> 'drip-wear-sidebar-1',
+		'description'	=> 'Drag and drop your widgets here',
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
 }
