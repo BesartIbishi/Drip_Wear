@@ -35,10 +35,16 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 	
 	register_nav_menus(
 		array(
-			'drip_wear_main_menu' 	=> 'Drip Wear Main Menu',
-			'drip_wear_footer_menu' => 'Drip Wear Footer Menu',
+			'drip_wear_main_menu' 	=> __('Drip Wear Main Menu','drip-wear'),
+			'drip_wear_footer_menu' =>__('Drip Wear Footer Menu','drip-wear')
 		)
 	);
+
+	$textdomain = 'drip-wear';
+	load_theme_textdomain($textdomain, get_stylesheet_directory(). '/languages/');
+	load_theme_textdomain($textdomain, get_template_directory(). '/languages/');
+	
+
 
 	add_theme_support( 'woocommerce', array(
 		'thumbnail_image_width' => 255,
@@ -98,45 +104,45 @@ function drip_wear_woocommerce_header_add_to_cart_fragment( $fragments ) {
 add_action( 'widgets_init', 'drip_wear_sidebars' );
 function drip_wear_sidebars(){
 	register_sidebar( array(
-		'name'			=> 'Drip Wear Main Sidebar',
+		'name'			=> __('Drip Wear Main Sidebar','drip-wear'),
 		'id'			=> 'drip-wear-sidebar-1',
-		'description'	=> 'Drag and drop your widgets here',
+		'description'	=> __('Drag and drop your widgets here','drip-wear'),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
 		register_sidebar( array(
-		'name'			=> 'Sidebar Shop',
+		'name'			=> __('Sidebar Shop','drip-wear'),
 		'id'			=> 'drip-wear-sidebar-shop',
-		'description'	=> 'Drag and drop your WooCommerce widgets here',
+		'description'	=> __('Drag and drop your WooCommerce widgets here','drip-wear'),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
 	register_sidebar( array(
-		'name'			=> 'Footer Sidebar 1',
+		'name'			=> __('Footer Sidebar 1','drip-wear'),
 		'id'			=> 'drip-wear-sidebar-footer1',
-		'description'	=> 'Drag and drop your widgets here',
+		'description'	=> __('Drag and drop your widgets here','drip-wear'),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
 	register_sidebar( array(
-		'name'			=> 'Footer Sidebar 2',
+		'name'			=> __('Footer Sidebar 2','drip-wear'),
 		'id'			=> 'drip-wear-sidebar-footer2',
-		'description'	=> 'Drag and drop your widgets here',
+		'description'	=> __('Drag and drop your widgets here','drip-wear'),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
 	register_sidebar( array(
-		'name'			=> 'Footer Sidebar 3',
+		'name'			=> __('Footer Sidebar 3','drip-wear'),
 		'id'			=> 'drip-wear-sidebar-footer3',
-		'description'	=> 'Drag and drop your widgets here',
+		'description'	=> __('Drag and drop your widgets here','drip-wear'),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',

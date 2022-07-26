@@ -13,8 +13,8 @@ get_header();
 			<main>
 				<div class="container">
 					<div class="row">
-
-						<h1>Search results for: <?php echo get_search_query(); ?></h1>
+				<div class="col-lg-9 col-md-8 col-12">
+						<h1><?php _e('Search results for:', 'drip-wear'); ?> <?php echo get_search_query(); ?></h1>
 
 						<?php 
 
@@ -57,13 +57,13 @@ get_header();
 
 								// We're using numeric page navigation here.
 								the_posts_pagination( array(
-									'prev_text'		=> 'Previous',
-									'next_text'		=> 'Next',
+									'prev_text'		=> __('Previous','drip-wear'), 
+									'next_text'=> __('Next','drip-wear'),
 								));
 								
 							else:
 						?>
-							<p>There are no results for your query.</p>
+							<p><?php e_('There are no results for your query.', 'drip-wear'); ?></p>
 						<?php endif; ?>
 					</div>
 				</div>

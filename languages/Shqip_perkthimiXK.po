@@ -1,0 +1,302 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Drip Wear v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2022-07-26 21:35+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Your Team <translations@example.com>\n"
+"Language: sq_XK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:15
+msgid "Page not found"
+msgstr "Faqja nuk ekziston"
+
+#: 404.php:16
+msgid "Unfortunately, the page you tried to reach does not exist on this site"
+msgstr "Fatkeqesisht, faqja qe po kerkoni nuk ekziston ketu"
+
+#: 404.php:21
+msgid "Take a Look at Our Latest Posts"
+msgstr "Shiko postimet e fundit"
+
+#: archive.php:54 index.php:54 search.php:60
+msgid "Previous"
+msgstr "Paraardhesja"
+
+#: archive.php:55 index.php:55 search.php:61
+msgid "Next"
+msgstr "Tjetra"
+
+#: archive.php:61 index.php:61 template-home.php:188
+msgid "Nothing to display."
+msgstr "Asgje per tu shfaqur."
+
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:34
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr "Komentet jane te mbyllura."
+
+#: footer.php:39
+msgid "Copyright X - All Rights Reserved"
+msgstr ""
+
+#: functions.php:38
+msgid "Drip Wear Main Menu"
+msgstr ""
+
+#: functions.php:39
+msgid "Drip Wear Footer Menu"
+msgstr ""
+
+#: functions.php:107
+msgid "Drip Wear Main Sidebar"
+msgstr ""
+
+#: functions.php:109 functions.php:127 functions.php:136 functions.php:145
+msgid "Drag and drop your widgets here"
+msgstr ""
+
+#: functions.php:116
+msgid "Sidebar Shop"
+msgstr ""
+
+#: functions.php:118
+msgid "Drag and drop your WooCommerce widgets here"
+msgstr "Kap dhe lesho woocommerce widgets ketu"
+
+#: functions.php:125
+msgid "Footer Sidebar 1"
+msgstr ""
+
+#: functions.php:134
+msgid "Footer Sidebar 2"
+msgstr ""
+
+#: functions.php:143
+msgid "Footer Sidebar 3"
+msgstr ""
+
+#: header.php:43
+msgid "My Account"
+msgstr "Llogaria ime"
+
+#: header.php:48
+msgid "Logout"
+msgstr "Shkyqu"
+
+#: header.php:52
+msgid "Login / Register"
+msgstr "Kyqu/Regjistrohu"
+
+#: header.php:66
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/class-wp-bootstrap-navwalker.php:366
+msgid "Add a menu"
+msgstr "Shto nje menu"
+
+#: inc/customizer.php:15
+msgid "Copyright Settings"
+msgstr ""
+
+#: inc/customizer.php:16
+msgid "Copyright Section"
+msgstr ""
+
+#: inc/customizer.php:31
+msgid "Copyright"
+msgstr ""
+
+#: inc/customizer.php:32
+msgid "Please, add your copyright information here"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "Slider Section"
+msgstr ""
+
+#: inc/customizer.php:59 inc/customizer.php:60
+msgid "Set slider page 1"
+msgstr ""
+
+#: inc/customizer.php:78 inc/customizer.php:79
+msgid "Button Text for Page 1"
+msgstr ""
+
+#: inc/customizer.php:97 inc/customizer.php:98
+msgid "URL for Page 1"
+msgstr ""
+
+#: inc/customizer.php:115 inc/customizer.php:116
+msgid "Set slider page 2"
+msgstr ""
+
+#: inc/customizer.php:134 inc/customizer.php:135
+msgid "Button Text for Page 2"
+msgstr ""
+
+#: inc/customizer.php:153 inc/customizer.php:154
+msgid "URL for Page 2"
+msgstr ""
+
+#: inc/customizer.php:172 inc/customizer.php:173
+msgid "Set slider page 3"
+msgstr ""
+
+#: inc/customizer.php:190 inc/customizer.php:191
+msgid "Button Text for Page 3"
+msgstr ""
+
+#: inc/customizer.php:208 inc/customizer.php:209
+msgid "URL for Page 3"
+msgstr ""
+
+#: inc/customizer.php:218
+msgid "Home Page Products and Blog Settings"
+msgstr ""
+
+#: inc/customizer.php:219
+msgid "Home Page Section"
+msgstr ""
+
+#: inc/customizer.php:233 inc/customizer.php:234
+msgid "Popular Products Title"
+msgstr ""
+
+#: inc/customizer.php:251 inc/customizer.php:252
+msgid "Popular Products Max Number"
+msgstr ""
+
+#: inc/customizer.php:269 inc/customizer.php:270
+msgid "Popular Products Max Columns"
+msgstr ""
+
+#: inc/customizer.php:286 inc/customizer.php:287
+msgid "New Arrivals Title"
+msgstr ""
+
+#: inc/customizer.php:303 inc/customizer.php:304
+msgid "New Arrivals Max Number"
+msgstr ""
+
+#: inc/customizer.php:321 inc/customizer.php:322
+msgid "New Arrivals Max Columns"
+msgstr ""
+
+#: inc/customizer.php:338 inc/customizer.php:339
+msgid "Deal of the Week Title"
+msgstr "Marreveshja e javes"
+
+#: inc/customizer.php:355
+msgid "Show Deal of the Week?"
+msgstr ""
+
+#: inc/customizer.php:372
+msgid "Deal of the Week Product ID"
+msgstr ""
+
+#: inc/customizer.php:373
+msgid "Product ID to Display"
+msgstr ""
+
+#: inc/customizer.php:389 inc/customizer.php:390
+msgid "Blog Section Title"
+msgstr ""
+
+#: search.php:17
+msgid "Search results for:"
+msgstr ""
+
+#: searchform.php:11
+msgid "Search for:"
+msgstr "Kerko per:"
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: template-home.php:77
+msgid "Popular products"
+msgstr "Produkte me te njohura"
+
+#: template-home.php:85
+msgid "New Arrivals"
+msgstr "Arritjet e reja"
+
+#: template-home.php:107
+msgid "Deal of the Week"
+msgstr "Marreveshja e javes"
+
+#: template-home.php:116
+msgid "% OFF"
+msgstr ""
+
+#: template-home.php:140
+msgid "Add to Cart"
+msgstr "Shto ne kart"
+
+#: template-home.php:154
+msgid "News From Our Blog"
+msgstr "Lajmet prej Blogjeve"
+
+#: template-parts/content-archive.php:23 template-parts/content-search.php:23
+#: template-parts/content-single.php:15 template-parts/content.php:23
+msgid "Published by"
+msgstr "Publikuar nga"
+
+#: template-parts/content-archive.php:23 template-parts/content-search.php:23
+#: template-parts/content-single.php:15 template-parts/content.php:23
+msgid "on"
+msgstr "ne"
+
+#: template-parts/content-archive.php:26 template-parts/content-search.php:26
+#: template-parts/content-single.php:18 template-parts/content.php:26
+msgid "Categories"
+msgstr "Kategoria"
+
+#: template-parts/content-archive.php:30 template-parts/content-search.php:30
+#: template-parts/content-single.php:22 template-parts/content.php:30
+msgid "Tags"
+msgstr "Tagjet"
+
+#: template-parts/content-single.php:38
+msgid "Pages"
+msgstr "Faqet"

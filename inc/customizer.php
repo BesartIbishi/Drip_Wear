@@ -12,8 +12,8 @@ function drip_wear_customizer( $wp_customize ){
 
 	$wp_customize->add_section(
 		'sec_copyright', array(
-			'title'			=> 'Copyright Settings',
-			'description'	=> 'Copyright Section'
+			'title'			=> __('Copyright Settings','drip-wear'),
+			'description'	=> __('Copyright Section','drip-wear')
 		)
 	);
 
@@ -28,8 +28,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_copyright', array(
-					'label'			=> 'Copyright',
-					'description'	=> 'Please, add your copyright information here',
+					'label'			=> __('Copyright','drip-wear'),
+					'description'	=> __('Please, add your copyright information here','drip-wear'),
 					'section'		=> 'sec_copyright',
 					'type'			=> 'text'
 				)
@@ -39,8 +39,8 @@ function drip_wear_customizer( $wp_customize ){
 
 	$wp_customize->add_section(
 		'sec_slider', array(
-			'title'			=> 'Slider Settings',
-			'description'	=> 'Slider Section'
+			'title'			=> __('Slider Settings','drip-wear'),
+			'description'	=> __('Slider Section','drip-wear')
 		)
 	);	
 
@@ -56,8 +56,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_page1', array(
-					'label'			=> 'Set slider page 1',
-					'description'	=> 'Set slider page 1',
+					'label'			=> __('Set slider page 1', 'drip-wear'),
+					'description'	=> __('Set slider page 1', 'drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -75,8 +75,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_text1', array(
-					'label'			=> 'Button Text for Page 1',
-					'description'	=> 'Button Text for Page 1',
+					'label'			=> __('Button Text for Page 1','drip-wear'),
+					'description'	=> __('Button Text for Page 1','drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -94,8 +94,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_url1', array(
-					'label'			=> 'URL for Page 1',
-					'description'	=> 'URL for Page 1',
+					'label'			=> __('URL for Page 1','drip-wear'),
+					'description'	=> __('URL for Page 1','drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -112,8 +112,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_page2', array(
-					'label'			=> 'Set slider page 2',
-					'description'	=> 'Set slider page 2',
+					'label'			=> __('Set slider page 2','drip-wear'),
+					'description'	=> __('Set slider page 2', 'drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -131,8 +131,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_text2', array(
-					'label'			=> 'Button Text for Page 2',
-					'description'	=> 'Button Text for Page 2',
+					'label'			=> __('Button Text for Page 2','drip-wear'),
+					'description'	=> __('Button Text for Page 2', 'drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -150,8 +150,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_url2', array(
-					'label'			=> 'URL for Page 2',
-					'description'	=> 'URL for Page 2',
+					'label'			=> __('URL for Page 2','drip-wear'),
+					'description'	=> __('URL for Page 2','drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -169,8 +169,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_page3', array(
-					'label'			=> 'Set slider page 3',
-					'description'	=> 'Set slider page 3',
+					'label'			=> __('Set slider page 3','drip-wear'),
+					'description'	=> __('Set slider page 3', 'drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -187,8 +187,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_text3', array(
-					'label'			=> 'Button Text for Page 3',
-					'description'	=> 'Button Text for Page 3',
+					'label'			=> __('Button Text for Page 3','drip-wear'),
+					'description'	=> __('Button Text for Page 3','drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -205,8 +205,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_url3', array(
-					'label'			=> 'URL for Page 3',
-					'description'	=> 'URL for Page 3',
+					'label'			=> __('URL for Page 3','drip-wear'),
+					'description'	=> __('URL for Page 3','drip-wear'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -215,11 +215,28 @@ function drip_wear_customizer( $wp_customize ){
 
 	$wp_customize->add_section(
 		'sec_home_page', array(
-			'title'			=> 'Home Page Products and Blog Settings',
-			'description'	=> 'Home Page Section'
+			'title'			=> __('Home Page Products and Blog Settings','drip-wear'),
+			'description'	=> __('Home Page Section','drip-wear')
 		)
 	);	
 
+		$wp_customize->add_setting(
+				'set_popular_title', array(
+					'type' 				=> 'theme_mod',
+					'default' 			=> '',
+					'sanitize_callback' => 'sanitize_text_field'
+				)
+			);
+
+			$wp_customize->add_control(
+				'set_popular_title', array(
+					'label' 		=> __( 'Popular Products Title', 'drip-wear' ),
+					'description' 	=> __( 'Popular Products Title', 'drip-wear' ),
+					'section' 		=> 'sec_home_page',
+					'type' 			=> 'text'
+				)
+			);
+
 		
 			$wp_customize->add_setting(
 				'set_popular_max_num', array(
@@ -231,8 +248,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_popular_max_num', array(
-					'label'			=> 'Popular Products Max Number',
-					'description'	=> 'Popular Products Max Number',
+					'label'			=> __('Popular Products Max Number','drip-wear'),
+					'description'	=> __('Popular Products Max Number','drip-wear'),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -249,13 +266,29 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_popular_max_col', array(
-					'label'			=> 'Popular Products Max Columns',
-					'description'	=> 'Popular Products Max Columns',
+					'label'			=> __('Popular Products Max Columns','drip-wear'),
+					'description'	=> __('Popular Products Max Columns','drip-wear'),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
 			);
 
+				$wp_customize->add_setting(
+				'set_new_arrivals_title', array(
+					'type' 				=> 'theme_mod',
+					'default' 			=> '',
+					'sanitize_callback' => 'sanitize_text_field'
+				)
+			);
+
+			$wp_customize->add_control(
+				'set_new_arrivals_title', array(
+					'label' 		=> __( 'New Arrivals Title', 'drip-wear' ),
+					'description' 	=> __( 'New Arrivals Title', 'drip-wear' ),
+					'section' 		=> 'sec_home_page',
+					'type' 			=> 'text'
+				)
+			);
 		
 			$wp_customize->add_setting(
 				'set_new_arrivals_max_num', array(
@@ -267,8 +300,8 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_new_arrivals_max_num', array(
-					'label'			=> 'New Arrivals Max Number',
-					'description'	=> 'New Arrivals Max Number',
+					'label'			=> __('New Arrivals Max Number','drip-wear'),
+					'description'	=> __('New Arrivals Max Number','drip-wear'),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -285,13 +318,29 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_new_arrivals_max_col', array(
-					'label'			=> 'New Arrivals Max Columns',
-					'description'	=> 'New Arrivals Max Columns',
+					'label'			=> __('New Arrivals Max Columns','drip-wear'),
+					'description'	=> __('New Arrivals Max Columns','drip-wear'),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
 			);
+			
+			$wp_customize->add_setting(
+				'set_deal_title', array(
+					'type' 				=> 'theme_mod',
+					'default' 			=> '',
+					'sanitize_callback' => 'sanitize_text_field'
+				)
+			);
 
+			$wp_customize->add_control(
+				'set_deal_title', array(
+					'label' 		=> __( 'Deal of the Week Title', 'drip-wear' ),
+					'description' 	=> __( 'Deal of the Week Title', 'drip-wear' ),
+					'section' 		=> 'sec_home_page',
+					'type' 			=> 'text'
+				)
+			);
 			
 			$wp_customize->add_setting(
 				'set_deal_show', array(
@@ -303,7 +352,7 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_deal_show', array(
-					'label'			=> 'Show Deal of the Week?',
+					'label'			=> __('Show Deal of the Week?','drip-wear'),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'checkbox'
 				)
@@ -320,10 +369,27 @@ function drip_wear_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_deal', array(
-					'label'			=> 'Deal of the Week Product ID',
-					'description'	=> 'Product ID to Display',
+					'label'			=> __('Deal of the Week Product ID','drip-wear'),
+					'description'	=> __('Product ID to Display','drip-wear'),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
+				)
+			);
+
+			$wp_customize->add_setting(
+				'set_blog_title', array(
+					'type' 				=> 'theme_mod',
+					'default' 			=> '',
+					'sanitize_callback' => 'sanitize_text_field'
+				)
+			);
+
+			$wp_customize->add_control(
+				'set_blog_title', array(
+					'label' 		=> __( 'Blog Section Title', 'drip-wear' ),
+					'description' 	=> __( 'Blog Section Title', 'drip-wear' ),
+					'section' 		=> 'sec_home_page',
+					'type' 			=> 'text'
 				)
 			);
 
