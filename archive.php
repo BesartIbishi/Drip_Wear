@@ -15,7 +15,7 @@ get_header();
 					<div class="row">
 					<div class="col-lg-9 col-md-8 col-12">
 					<?php 
-					get_search_form();
+					the_archive_title( '<h1 class="article-title">','</h1>');
 								// If there are any posts
 								if( have_posts() ):
 
@@ -51,8 +51,8 @@ get_header();
 							endwhile;
 					// We're using numeric page navigation here.
 					the_posts_pagination( array(
-						'prev_text'		=> __('Previous','drip-wear'),
-						'next_text'		=> __('Next','drip-wear'),
+						'prev_text'		=>esc_html__('Previous','drip-wear'),
+						'next_text'		=> esc_html__('Next','drip-wear'),
 					));
 					
 				else:

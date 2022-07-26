@@ -14,7 +14,7 @@ get_header();
 				<div class="container">
 					<div class="row">
 				<div class="col-lg-9 col-md-8 col-12">
-						<h1><?php _e('Search results for:', 'drip-wear'); ?> <?php echo get_search_query(); ?></h1>
+						<h1><?php esc_html_e('Search results for:', 'drip-wear'); ?> <?php echo get_search_query(); ?></h1>
 
 						<?php 
 
@@ -57,8 +57,8 @@ get_header();
 
 								// We're using numeric page navigation here.
 								the_posts_pagination( array(
-									'prev_text'		=> __('Previous','drip-wear'), 
-									'next_text'=> __('Next','drip-wear'),
+									'prev_text'		=> esc_html__('Previous','drip-wear'), 
+									'next_text'=> esc_html__('Next','drip-wear'),
 								));
 								
 							else:

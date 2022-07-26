@@ -51,14 +51,14 @@ get_header();
 							endwhile;
 					// We're using numeric page navigation here.
 					the_posts_pagination( array(
-						'prev_text'		=> __('Previous','drip-wear'),
-						'next_text'		=> __('Next','drip-wear'),
+						'prev_text'		=> esc_html__('Previous','drip-wear'),
+						'next_text'		=> esc_html__('Next','drip-wear'),
 					));
 					
 				else:
 			?>
 					?>
-						<p><?php _e('Nothing to display.','drip-wear') ?></p>
+						<p><?php esc_html_e('Nothing to display.','drip-wear') ?></p>
 					<?php endif; ?>
 					</div>
 						<?php get_sidebar(); ?>	
