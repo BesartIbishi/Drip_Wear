@@ -15,6 +15,7 @@ get_header();
 					<div class="row">
 					<div class="col-lg-9 col-md-8 col-12">
 					<?php 
+					get_search_form();
 								// If there are any posts
 								if( have_posts() ):
 
@@ -60,7 +61,7 @@ get_header();
 						<p>Nothing to display.</p>
 					<?php endif; ?>
 					</div>
-					<?php get_sidebar(); ?>
+						<?php get_sidebar(); ?>	
 				</div>
 			</main>
 		</div>

@@ -106,4 +106,40 @@ function drip_wear_sidebars(){
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
+		register_sidebar( array(
+		'name'			=> 'Sidebar Shop',
+		'id'			=> 'drip-wear-sidebar-shop',
+		'description'	=> 'Drag and drop your WooCommerce widgets here',
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+	register_sidebar( array(
+		'name'			=> 'Footer Sidebar 1',
+		'id'			=> 'drip-wear-sidebar-footer1',
+		'description'	=> 'Drag and drop your widgets here',
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+	register_sidebar( array(
+		'name'			=> 'Footer Sidebar 2',
+		'id'			=> 'drip-wear-sidebar-footer2',
+		'description'	=> 'Drag and drop your widgets here',
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+	register_sidebar( array(
+		'name'			=> 'Footer Sidebar 3',
+		'id'			=> 'drip-wear-sidebar-footer3',
+		'description'	=> 'Drag and drop your widgets here',
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
 }

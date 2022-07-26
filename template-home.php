@@ -99,7 +99,7 @@ get_header(); ?>
 						$test = get_post_meta($deal, '_regular_price');
 						
 						if( $showdeal == 1 && ( !empty( $deal ) ) ):
-							$discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
+							// $discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
 						?>
 						<section class="deal-of-the-week">
 							<div class="container">

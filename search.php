@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Drip Wear 
+ * @package Drip Wear
  */
 
 get_header();
@@ -25,6 +25,7 @@ get_header();
 
 								// Load posts loop
 								while( have_posts() ): the_post();
+									get_template_part( 'template-parts/content', 'search' );
 									?>
 										<article <?php post_class(); ?>>
 											<h2>
