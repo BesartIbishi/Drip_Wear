@@ -63,7 +63,7 @@ get_header();
 								
 							else:
 						?>
-							<p><?php e_('There are no results for your query.', 'drip-wear'); ?></p>
+							
 						<?php endif; ?>
 					</div>
 				</div>
