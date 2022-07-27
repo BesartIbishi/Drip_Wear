@@ -149,3 +149,23 @@ function drip_wear_sidebars(){
 		'after_title'	=> '</h4>',
 	) );
 }
+
+/**
+ * Add a new country to countries list
+ */
+add_filter( 'woocommerce_countries',  'kosovo' );
+
+function kosovo( $countries ) {
+  $new_countries = array(
+	                    'RKS'  => __( 'Kosovo', 'woocommerce' ),
+	                );
+
+	return array_merge( $countries, $new_countries );
+}
+
+add_filter( 'woocommerce_continents', 'kosovo' );
+
+// function handsome_bearded_guy_add_my_country_to_continents( $continents ) {
+// 	$continents['EU']['countries'][] = 'RKS';
+// 	return $continents;
+// }

@@ -7,6 +7,14 @@ Text-domain: drip-wear
 Tags: e-commerce, custom-menu, costum-logo, featured-images, footer-widgets
 */
 
+:root{
+    color: #2471ca; 
+    color: #3373d2;
+    
+    --primary: #1c66c7;
+    --primary: #3576cc;
+}
+
 
 body{
     font-family: 'Rajdhani', sans-serif;
@@ -116,7 +124,7 @@ header .brand img{
 }
 
 .main-menu .navbar-nav .active>.nav-link{ 
-    color: #CA2424; 
+    color: #2471ca; 
 }
 
 .main-menu .dropdown-item:focus, 
@@ -132,7 +140,7 @@ header .brand img{
 
 .main-menu .dropdown-item.active, 
 .main-menu .dropdown-item:active {
-    background-color: #d2335b;
+    background-color: #3392d2;
 }
 
 .main-menu .navbar-toggler{
@@ -206,7 +214,7 @@ header .brand img{
 }
 
 .cart .items{
-    background: #CA2424;
+    background: #2471ca;
     color: #fff;
     width: 20px;
     height: 20px;
@@ -249,7 +257,7 @@ header .brand img{
 }
 
 .slider-details-container a{
-    background-color: #D2335B;
+    background-color: #3378d2;
     color: #fff;
     border-radius: 5px;
     text-transform: uppercase;
@@ -273,7 +281,7 @@ header .brand img{
 }
 
 .flex-control-paging li a.flex-active {
-    background: #D2335B !important;
+    background: #3378d2 !important;
     width: 25px !important;
 }
 
@@ -330,7 +338,7 @@ header .brand img{
 .home .popular-products .woocommerce ul.products li.product .button,
 .home .new-arrivals .woocommerce ul.products li.product .button {
     background-color: transparent;
-    color: #d83a65;
+    color: #3a79d8;
     padding: 0;
     margin: 0;
     transition: 0.5s;
@@ -355,7 +363,7 @@ header .brand img{
 }
 
 .deal-of-the-week .discount{
-    background: #ff6891;
+    background: #68aeff;
     color: #fff;
     padding: 0.5rem;
     display: inline-block;
@@ -370,7 +378,7 @@ header .brand img{
     left: 0;
     height: 1px;
     width: 100%;
-    border: 1px dashed #ffc8d8;    
+    border: 1px dashed #c8e6ff;    
 }
 
 .deal-of-the-week .discount:after{
@@ -380,7 +388,7 @@ header .brand img{
     left: 0;
     height: 1px;
     width: 100%;
-    border: 1px dashed #ffc8d8;    
+    border: 1px dashed #c8d9ff;    
 }
 
 .deal-of-the-week .section-title{
@@ -425,7 +433,7 @@ header .brand img{
 }
 
 .deal-of-the-week a.add-to-cart{
-    background-color: #D2335B;
+    background-color: #338bd2;
     color: #fff;
     text-decoration: none;
     line-height: 1;
@@ -493,7 +501,7 @@ header .brand img{
 }
 
 .footer-menu ul li.current-menu-item a{ 
-    color: #ff9292; 
+    color: #92c1ff; 
 }
 
 
@@ -584,7 +592,7 @@ header .brand img{
     border-radius: 0;   
     width: 83px;
     padding: 0;
-    background-color: #D2335B;
+    background-color: #337dd2;
     margin: 0;
     font-weight: 400;
 }
@@ -598,7 +606,7 @@ header .brand img{
     height: 0;
     border-style: solid;
     border-width: 24px 22px 0 0;
-    border-color: #D2335B transparent transparent transparent;
+    border-color: #3373d2 transparent transparent transparent;
 }
 
 .woocommerce ul.products li.product .onsale:after {
@@ -610,7 +618,7 @@ header .brand img{
     height: 0;
     border-style: solid;
     border-width: 0 22px 24px 0;
-    border-color: transparent transparent #D2335B transparent;
+    border-color: transparent transparent #3373d2 transparent;
 }
 
 .woocommerce nav.woocommerce-pagination ul li a, 
@@ -630,7 +638,7 @@ header .brand img{
 .woocommerce button.button.alt, 
 .woocommerce input.button.alt,
 .woocommerce ul.products li.product .button {
-    background-color: #D2335B;
+    background-color: #3373d2;
     color: #fff;
 }
 
@@ -639,7 +647,7 @@ header .brand img{
 .woocommerce button.button.alt:hover, 
 .woocommerce input.button.alt:hover,
 .woocommerce ul.products li.product .button:hover {
-    background-color: #bd3759;
+    background-color: #376dbd;
 }
 
 .product_meta > span{
@@ -669,7 +677,7 @@ header .brand img{
     border-radius: 0;   
     width: 84px;
     padding: 0;
-    background-color: #D2335B;
+    background-color: #3373d2;
     margin: 0;
     font-weight: 400;
 }
@@ -683,7 +691,7 @@ header .brand img{
     height: 0;
     border-style: solid;
     border-width: 23px 22px 0 0;
-    border-color: #D2335B transparent transparent transparent;
+    border-color: #3373d2 transparent transparent transparent;
 }
 
 .woocommerce span.onsale:after {
@@ -695,7 +703,7 @@ header .brand img{
     height: 0;
     border-style: solid;
     border-width: 0 22px 23px 0;
-    border-color: transparent transparent #D2335B transparent;
+    border-color: transparent transparent #3373d2 transparent;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs{
@@ -745,7 +753,7 @@ header .brand img{
     border-collapse: collapse;
 }
 .woocommerce table.shop_table thead{
-    background-color: #D2335B;
+    background-color: #3373d2;
     color: #fff;
 }
 
@@ -785,7 +793,7 @@ header .brand img{
 
 /* Store Notice */
 .woocommerce-store-notice, p.demo_store {
-    background-color: #750000;
+    background-color: #003c75;
 }
 
 
@@ -854,7 +862,7 @@ header .brand img{
 }
 
 .comment-form input[type="submit"]{
-    background-color: #D2335B;
+    background-color: #3373d2;
     color: #fff;
     border-radius: 5px;
     text-transform: uppercase;
@@ -1066,11 +1074,11 @@ button, input, optgroup, select, textarea {
 }
 
 a{
-    color: #d35758;
+    color: #579bd3;
 }
 
 a:hover {
-    color: #af4142;
+    color: #417aaf;
     text-decoration: none;
 }
 
