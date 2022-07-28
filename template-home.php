@@ -34,6 +34,9 @@ get_header(); ?>
 								$slider_loop->the_post();
 						?>
 						    <li>
+								
+							<div class="shadow-overlay"></div>
+
 						      <?php the_post_thumbnail( 'drip-wear-slider', array( 'class' => 'img-fluid' ) ); ?>
 						      <div class="container">
 						      	<div class="slider-details-container">
@@ -100,7 +103,7 @@ get_header(); ?>
 						$test = get_post_meta($deal, '_regular_price');
 						
 						if( $showdeal == 1 && ( !empty( $deal ) ) ):
-							// $discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
+							$discount_percentage = absint( 100 - ( ( $sale/$regular ) * 100 ) );
 						?>
 						<section class="deal-of-the-week">
 							<div class="container">

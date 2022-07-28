@@ -86,7 +86,7 @@ if( class_exists('woocommerce')){
 
 
 
- 
+
 add_filter( 'woocommerce_add_to_cart_fragments', 'drip_wear_woocommerce_header_add_to_cart_fragment' );
 
 function drip_wear_woocommerce_header_add_to_cart_fragment( $fragments ) {
@@ -163,9 +163,12 @@ function kosovo( $countries ) {
 	return array_merge( $countries, $new_countries );
 }
 
-add_filter( 'woocommerce_continents', 'kosovo' );
+//add_filter( 'woocommerce_continents', 'kosovo' );
 
 // function handsome_bearded_guy_add_my_country_to_continents( $continents ) {
 // 	$continents['EU']['countries'][] = 'RKS';
 // 	return $continents;
 // }
+
+// remove State field in checkout
+//add_filter( 'woocommerce_shipping_calculator_enable_state', '__return_false' );

@@ -18,7 +18,7 @@ get_header();
 
 						<?php 
 
-						get_search_form();
+						//get_search_form();
 
 							// If there are any posts
 							if( have_posts() ):
