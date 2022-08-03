@@ -34,6 +34,9 @@ get_header(); ?>
 								$slider_loop->the_post();
 						?>
 						    <li>
+								
+							<div class="shadow-overlay"></div>
+
 						      <?php the_post_thumbnail( 'drip-wear-slider', array( 'class' => 'img-fluid' ) ); ?>
 						      <div class="container">
 						      	<div class="slider-details-container">
@@ -42,7 +45,8 @@ get_header(); ?>
 						      		</div>
 						      		<div class="slider-description">
 						      			<div class="subtitle"><?php the_content(); ?></div>
-						      			<a class="link" href="<?php echo $slider_button_url[$j]; ?>"><?php echo $slider_button_text[$j]; ?></a>
+						      			<a class="link" href="<?php echo 
+										esc_html($slider_button_url[$j]); ?>"><?php echo esc_html($slider_button_text[$j]); ?></a>
 						      		</div>
 						      	</div>
 						      </div>
@@ -74,17 +78,17 @@ get_header(); ?>
 							?>
 							<div class="container">
 								<div class="section-title">
-									<h2><?php echo get_theme_mod( 'set_popular_title', 'Popular products' ); ?></h2>
+									<h2><?php echo esc_html( get_theme_mod( 'set_popular_title', __('Popular products','drip-wear') )); ?></h2>
 								</div>
-								<?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
+								<?php echo do_shortcode( '[products limit=" ' . esc_attr($popular_limit) . ' " columns=" ' . esc_attr($popular_col) . ' " orderby="popularity"]' ); ?>
 							</div>
 						</section>
 						<section class="new-arrivals">
 							<div class="container">
 								<div class="section-title">
-									<h2><?php echo get_theme_mod( 'set_new_arrivals_title', 'New Arrivals' ); ?></h2>
+									<h2><?php echo esc_html( get_theme_mod( 'set_new_arrivals_title', __('New Arrivals','drip-wear') )); ?></h2>
 								</div>
-								<?php echo do_shortcode( '[products limit=" ' . $arrivals_limit . ' " columns=" ' . $arrivals_col . ' " orderby="date"]' ); ?>
+								<?php echo do_shortcode( '[products limit=" ' . esc_attr($arrivals_limit) . ' " columns=" ' . esc_attr($arrivals_col) . ' " orderby="date"]' ); ?>
 							</div>
 						</section>
 						<?php 
@@ -104,7 +108,9 @@ get_header(); ?>
 						<section class="deal-of-the-week">
 							<div class="container">
 								<div class="section-title">
-									<h2><?php echo get_theme_mod( 'set_deal_title', 'Deal of the Week' ); ?></h2>
+									<h2><?php echo 
+									esc_html(
+									get_theme_mod( 'set_deal_title', __('Deal of the Week','drip-wear' ))); ?></h2>
 								</div>
 								<div class="row d-flex align-items-center">
 									<div class="deal-img col-md-6 col-12 ml-auto text-center">
@@ -112,31 +118,36 @@ get_header(); ?>
 									</div>
 									<div class="deal-desc col-md-4 col-12 mr-auto text-center">
 										<?php if( !empty( $sale ) ): ?>
-											<!-- <span class="discount">
-												<?php echo $discount_percentage . '% OFF'; ?>
-											</span> -->
+											<span class="discount">
+												<?php echo 
+												esc_html($discount_percentage . __('% OFF','drip-wear')); ?>
+											</span>
 										<?php endif; ?>
 										<h3>
-											<a href="<?php echo get_permalink( $deal ); ?>"><?php echo get_the_title( $deal ); ?></a>
+											<a href="<?php echo esc_html(get_permalink( $deal )); ?>"><?php echo 
+											esc_html(get_the_title( $deal )); ?></a>
 										</h3>
-										<p><?php echo get_the_excerpt( $deal ); ?></p>
+										<p><?php echo 
+										esc_html(get_the_excerpt( $deal )); ?></p>
 										<div class="prices">
 											<span class="regular">
 												<?php 
-												echo $currency;
-												echo $regular;
+												echo esc_html( $currency);
+												echo esc_html( $regular);
 												?>
 											</span>
 											<?php if( !empty( $sale ) ): ?>
 												<span class="sale">
 													<?php 
-													echo $currency;
-													echo $sale;
+													echo esc_html($currency);
+													echo esc_html( $sale);
 													?>										
 												</span>
 											<?php endif; ?>
 										</div>
-										<a href="<?php echo esc_url( '?add-to-cart=' . $deal ); ?>" class="add-to-cart">Add to Cart</a>
+										<a href="<?php echo esc_url( '?add-to-cart=' . $deal ); ?>" class="add-to-cart"><?php
+										esc_html_e('Add to Cart','drip-wear')
+										?></a>
 									</div>
 								</div>
 							</div>
@@ -149,7 +160,7 @@ get_header(); ?>
 				<section class="lab-blog">
 					<div class="container">
 						<div class="section-title">
-							<h2><?php echo get_theme_mod( 'set_blog_title', 'News From Our Blog' ); ?></h2>
+							<h2><?php echo esc_html( get_theme_mod( 'set_blog_title', __('News From Our Blog','drip-wear' ))); ?></h2>
 						</div>						
 						<div class="row">
 							<?php 
@@ -183,7 +194,7 @@ get_header(); ?>
 									wp_reset_postdata();
 								else:
 							?>
-								<p>Nothing to display.</p>
+									<p><?php esc_html_e('Nothing to display.','drip-wear') ?></p>
 							<?php endif; ?>
 						</div>
 					</div>

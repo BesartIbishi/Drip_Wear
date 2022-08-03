@@ -35,10 +35,16 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 	
 	register_nav_menus(
 		array(
-			'drip_wear_main_menu' 	=> 'Drip Wear Main Menu',
-			'drip_wear_footer_menu' => 'Drip Wear Footer Menu',
+			'drip_wear_main_menu' 	=> esc_html__('Drip Wear Main Menu','drip-wear'),
+			'drip_wear_footer_menu' => esc_html__('Drip Wear Footer Menu','drip-wear')
 		)
 	);
+
+	$textdomain = 'drip-wear';
+	load_theme_textdomain($textdomain, get_stylesheet_directory(). '/languages/');
+	load_theme_textdomain($textdomain, get_template_directory(). '/languages/');
+	
+
 
 	add_theme_support( 'woocommerce', array(
 		'thumbnail_image_width' => 255,
@@ -69,6 +75,7 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 	if ( ! isset( $content_width ) ) {
 		$content_width = 600;
 	}				
+	add_theme_support ( 'title-tag' );
 }
 
 add_action( 'after_setup_theme', 'drip_wear_config', 0 );
@@ -79,7 +86,7 @@ if( class_exists('woocommerce')){
 
 
 
- 
+
 add_filter( 'woocommerce_add_to_cart_fragments', 'drip_wear_woocommerce_header_add_to_cart_fragment' );
 
 function drip_wear_woocommerce_header_add_to_cart_fragment( $fragments ) {
@@ -93,3 +100,75 @@ function drip_wear_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	$fragments['span.items'] = ob_get_clean();
 	return $fragments;
 }
+
+add_action( 'widgets_init', 'drip_wear_sidebars' );
+function drip_wear_sidebars(){
+	register_sidebar( array(
+		'name'			=> esc_html__('Drip Wear Main Sidebar','drip-wear'),
+		'id'			=> 'drip-wear-sidebar-1',
+		'description'	=> esc_html__('Drag and drop your widgets here','drip-wear'),
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+		register_sidebar( array(
+		'name'			=>  esc_html__('Sidebar Shop','drip-wear'),
+		'id'			=> 'drip-wear-sidebar-shop',
+		'description'	=>  esc_html__('Drag and drop your WooCommerce widgets here','drip-wear'),
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+	register_sidebar( array(
+		'name'			=>  esc_html__('Footer Sidebar 1','drip-wear'),
+		'id'			=> 'drip-wear-sidebar-footer1',
+		'description'	=>  esc_html__('Drag and drop your widgets here','drip-wear'),
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+	register_sidebar( array(
+		'name'			=>  esc_html__('Footer Sidebar 2','drip-wear'),
+		'id'			=> 'drip-wear-sidebar-footer2',
+		'description'	=>  esc_html__('Drag and drop your widgets here','drip-wear'),
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+	register_sidebar( array(
+		'name'			=>  esc_html__('Footer Sidebar 3','drip-wear'),
+		'id'			=> 'drip-wear-sidebar-footer3',
+		'description'	=>  esc_html__('Drag and drop your widgets here','drip-wear'),
+		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h4 class="widget-title">',
+		'after_title'	=> '</h4>',
+	) );
+}
+
+/**
+ * Add a new country to countries list
+ */
+add_filter( 'woocommerce_countries',  'kosovo' );
+
+function kosovo( $countries ) {
+  $new_countries = array(
+	                    'RKS'  => __( 'Kosovo', 'woocommerce' ),
+	                );
+
+	return array_merge( $countries, $new_countries );
+}
+
+//add_filter( 'woocommerce_continents', 'kosovo' );
+
+// function handsome_bearded_guy_add_my_country_to_continents( $continents ) {
+// 	$continents['EU']['countries'][] = 'RKS';
+// 	return $continents;
+// }
+
+// remove State field in checkout
+//add_filter( 'woocommerce_shipping_calculator_enable_state', '__return_false' );

@@ -1,21 +1,21 @@
 <?php
 /**
- * The main template file
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Drip Wear
- 
  */
 
 get_header();
 ?>
-
 		<div class="content-area">
 			<main>
 				<div class="container">
 					<div class="row">
 					<div class="col-lg-9 col-md-8 col-12">
 					<?php 
-					// get_search_form();
+					the_archive_title( '<h1 class="article-title">','</h1>');
 								// If there are any posts
 								if( have_posts() ):
 
@@ -51,14 +51,14 @@ get_header();
 							endwhile;
 					// We're using numeric page navigation here.
 					the_posts_pagination( array(
-						'prev_text'		=> esc_html__('Previous','drip-wear'),
+						'prev_text'		=>esc_html__('Previous','drip-wear'),
 						'next_text'		=> esc_html__('Next','drip-wear'),
 					));
 					
 				else:
 			?>
 					?>
-						<p><?php esc_html_e('Nothing to display.','drip-wear') ?></p>
+						<p><?php _e('Nothing to display.','drip-wear') ?></p>
 					<?php endif; ?>
 					</div>
 						<?php get_sidebar(); ?>	
